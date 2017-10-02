@@ -53,7 +53,7 @@ public class KeyLock implements Comparable {
      * This method overrides the compareTo method for Object.
      */
     
-    @Override
+
     public int compareTo (Object obj) {
         if (obj.equals (this)) return 0;
         else return -1;

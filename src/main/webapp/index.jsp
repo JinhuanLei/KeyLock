@@ -15,20 +15,31 @@
 
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="But">
-    <button type="button" class="btn btn-primary col-md-3 col-md-offset-3" onclick="initial()"> Initialise</button>
+    </br></br> </br>
+    <button type="button" class="btn btn-primary col-md-3 col-md-offset-1" onclick="initial()"> Initialise</button>
     <button type="button" class="btn btn-primary col-md-3 col-md-offset-1" onclick="AddComb()">Add a combination</button>
-    <button type="button" class="btn btn-primary col-md-3 col-md-offset-3">Add a new Key</button>
-    </br> </br></br> </br></br> </br>
+    <button type="button" class="btn btn-primary col-md-3 col-md-offset-1">Add a new Key</button>
+    </br> </br></br>
     <button type="button" class="btn btn-primary col-md-3 col-md-offset-1">update your key</button>
-    <button type="button" class="btn btn-primary col-md-3 col-md-offset-3">Delete a key</button>
+    <button type="button" class="btn btn-primary col-md-3 col-md-offset-1">Delete a key</button>
 </div>
-<div id="Combarea">
+</br>
+</br>
+</br>
+<div>
+<div id="Combarea" class="col-md-3">
 
 </div>
-<div id="Keyarea">
+<div id="Keyarea" class="col-md-3">
 
 
 </div>
+    <div id="Lockarea" class="col-md-3">
+
+
+    </div>
+    </div>
+
 <script type="text/javascript">
     function initial() {
         $.ajax({
@@ -37,15 +48,16 @@
             data: "",
             dataType: "text",
             success:function(msg){
-                  var data=msg;
+                  var keysdata=msg;
                 //console.log("data 1 %s",);
                // console.log("data 2 %s",);
-                var myobj=eval(data);
+
+                var myobj=eval(keysdata);
                 for(var i=0;i<myobj.length;i++){
 //                    alert(myobj[i].ID);
 //                    alert(myobj[i].type);
-                    console.log("data 1 %s",myobj[i].ID);
-                     console.log("data 2 %s",myobj[i].type);
+//                    console.log("data 1 %s",myobj[i].ID);
+//                     console.log("data 2 %s",myobj[i].type);
                     //document.getElementById("Keyarea").innerHTML="ID:"+myobj[i].ID+"type:"+myobj[i].type;
                     var a=document.getElementById("Keyarea");
                     var b=document.createElement("p");
